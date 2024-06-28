@@ -37,8 +37,61 @@ a {
     border-radius: 50%;
 }
 
+.intro {
+    background: linear-gradient(15deg, var(--purple2), var(--purple1));
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 33em;
+    overflow: hidden;
+    position: relative;
+}
+.intro .c1, .intro .c2 {
+    position: absolute;
+    left: -60px;
+    bottom: -60px;
+    width: 11em;
+    height: 11em;
+    background-color: #461e7b;
+    border-radius: 50%;
+}
+.intro .c2 {
+    left: 26px;
+    bottom: -102px;
+    width: 10em;
+    height: 10em;
+    background-color: #461e7bd1;
+}
+.intro .image {
+    position: relative;
+}
+.intro .image::before {
+    content: '';
+    position: absolute;
+    right: -2em;
+    background: var(--purple2);
+    width: 30em;
+    height: 30em;
+    border-radius: 50%;
+}
+.intro .image img {
+    width: 33em;
+    z-index: 2;
+    position: relative;
+}
+.intro .text h1 {
+
+    font-size: 4em;
+}
+.intro .text p {
+    font-size: 20px;
+    margin-top: 5px;
+}
 
 
+
+/* Header and Footer */
 header {
     display: flex;
     align-items: center;
@@ -59,9 +112,49 @@ header .logo img {
     width: 5em
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4em;
+    background-color: var(--purple2);
+    padding: 1em 0;
+    margin-top: 3em
+}
+footer .logo {
+    width: 6em;
+}
+
+footer .links {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    list-style: none;
+}
+footer .links a li {
+    color: #fff;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+footer .socials {
+    display: flex;
+    align-items: center;
+    gap: 2em
+}
+footer .socials img {
+    width: 1.4em;
+}
+footer p {
+    color: #fff;
+}
+/* Header and Footer */
 
 
-.intro {
+
+/* Home Page */
+.home-intro {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,23 +162,22 @@ header .logo img {
     margin-top: 4em;
     overflow: hidden;
 }
-.intro .text {
+.home-intro .text {
     width: 50%;
     color: #FFF;
 }
-.intro .text h1 {
+.home-intro .text h1 {
     font-size: 60px
 }
-.intro .text p {
+.home-intro .text p {
     font-size: 22px;
     font-weight: 300;
     margin: 15px 0;
 }
-
-.intro .image {
+.home-intro .image {
     position: relative;
 }
-.intro .image::before {
+.home-intro .image::before {
     content: '';
     position: absolute;
     right: -5em;
@@ -95,13 +187,13 @@ header .logo img {
     border-radius: 50%;
     z-index: -1;
 }
-.intro .image .man-vr {
+.home-intro .image .man-vr {
     width: 28em;
     z-index: 5;
     position: relative;
     margin-bottom: -4px;
 }
-.intro .image .cube-icon {
+.home-intro .image .cube-icon {
     position: absolute;
     right: 42px;
     top: 12em;
@@ -109,15 +201,15 @@ header .logo img {
     z-index: 1;
 }
 
-.intro .image .c1 {
+.home-intro .image .c1 {
     top: 4em;
     right: 7em;
 }
-.intro .image .c2 {
+.home-intro .image .c2 {
     top: 14em;
     left: 22px;
 }
-.intro .image .c3 {
+.home-intro .image .c3 {
     top: 21em;
     right: -5px;
 }
@@ -291,7 +383,6 @@ header .logo img {
 
 
 
-
 .call {
     color: #FFF;
     background: linear-gradient(15deg, var(--purple2), var(--purple1));
@@ -300,7 +391,7 @@ header .logo img {
     position: relative;
     right: -50%;
     transform: translateX(-50%);
-    padding: 2em 0;
+    padding: 3em 0;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -314,7 +405,7 @@ header .logo img {
     font-size: 19px;
     font-weight: 300;
     line-height: 1.3em;
-    margin: 12px 0
+    margin: 15px 0
 }
 .call .btn {
     background-color: #5a2d96;
@@ -322,12 +413,9 @@ header .logo img {
 }
 
 
-
-
 .blog {
     padding: 6em 0
 }
-
 .blog .title {
     position: relative;
     right: -50%;
@@ -348,13 +436,14 @@ header .logo img {
     font-size: 32px;
     color: #FFF;
 }
-
 .blog .last-articles {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4em;
-    margin-top: 3em
+    flex-wrap: wrap;
+    gap: 5em;
+    margin-top: 3em;
+    padding: 0 1em
 }
 .blog .last-articles .article {
     width: fit-content;
@@ -396,4 +485,61 @@ header .logo img {
     width: 5em;
     font-size: 17px;
     margin-top: 10px
+}
+
+
+
+
+/* Contact Page */
+.contact {
+    color: #FFF;
+    display: flex;
+    justify-content: space-around;
+    padding: 4em 10em;
+}
+
+.contact .contact-info {
+    
+}
+.contact .contact-info h2 {
+    margin-bottom: 15px
+}
+.contact .contact-info .socials {
+    list-style: none;
+}
+.contact .contact-info .socials li{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 15px
+}
+.contact .contact-info .socials li img {
+    width: 1.7em;
+}
+.contact .contact-info .socials li p {
+
+}
+
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+.contact form input {
+    width: 34em;
+    height: 3em;
+    padding-left: 7px;
+    border: 3px solid var(--purple2);
+    border-radius: 4px;
+    outline: none;
+}
+.contact form input:focus {
+    border: 2px solid var(--purple1)
+}
+.contact form input:nth-child(4) {
+    height: 10em;
+}
+.contact form .btn {
+
 }
