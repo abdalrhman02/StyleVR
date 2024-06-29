@@ -701,3 +701,32 @@ footer p {
     font-size: 19px;
     font-weight: 500;
 }
+
+
+
+
+
+
+
+
+/* Blog Article */
+.article {
+    color: #fff;
+    padding: 4em 22em
+}
+.article img {
+    width: 45em;
+}
+.article h1 {
+    background: var(--purple2);
+    width: fit-content;
+    padding: 2px 4px;
+    margin-top: -5px;
+}
+.article p {
+    margin-top: 10px;
+    line-height: 1.4em;
+    font-size: 19px;
+    font-weight: 300;
+    max-width: 1000px;
+}
